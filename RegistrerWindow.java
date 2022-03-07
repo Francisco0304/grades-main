@@ -1,0 +1,139 @@
+package GUI;
+
+import logic.ManagementGrades;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class RegistrerWindow extends JInternalFrame {
+
+    private MainWindow myWindow;
+    private JDesktopPane desktopPane;
+
+    //private JDesktopPane desktopPane;
+    // private Registro registro;
+    private JTextField std;
+    private JTextField codeS;
+    private JTextField codeM;
+    private JTextField descrip;
+    private JButton registrarS;
+    private JButton registrarM;
+    private MainWindow mainWindow;
+    private ManagementGrades managementGrades;
+
+    public RegistrerWindow(MainWindow mainWindow, JDesktopPane desktopPane){
+        this.myWindow = mainWindow;
+        this.desktopPane = desktopPane;
+        setSize( new Dimension(782,537));
+        setResizable(false);
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
+        setClosable(true);
+        setLayout(new GridBagLayout());
+        desktopPane.add(this);
+        begin();
+
+    }
+
+    private void begin() {
+        beginComponent();
+        addComponent();
+    }
+
+    private void beginComponent() {
+
+        std= new JTextField();
+        codeS= new JTextField();
+        descrip= new JTextField();
+        codeM= new JTextField();
+
+        registrarS= new JButton("Registrar Estudiante");
+       // registrarS.setActionCommand(HandlingEvents.REG_);
+        //registrarS.addActionListener(new HandlingEvents(mainWindow));
+
+
+        registrarM= new JButton("Registrar Materia");
+
+    }
+
+    private void addComponent() {
+
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        gbc.gridx=0;
+        gbc.gridy= 0;
+        gbc.fill= GridBagConstraints.HORIZONTAL;
+        gbc.insets= new Insets(5, 100, 5, 100);
+        add(new JLabel("Registro Estudiantes"), gbc);
+
+        gbc.gridx=0;
+        gbc.gridy= 1;
+        gbc.fill= GridBagConstraints.CENTER;
+        add(new JLabel("Nombre del Estudiante"), gbc);
+
+
+        gbc.gridy = 2;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add( std, gbc );
+
+        gbc.gridx=0;
+        gbc.gridy= 3;
+        gbc.fill= GridBagConstraints.CENTER;
+        add(new JLabel("Codigo del Estudiante"), gbc);
+
+        gbc.gridy = 4;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add( codeS, gbc );
+
+        gbc.gridy = 5;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        gbc.gridwidth=2;
+        add( registrarS, gbc );
+
+
+        gbc.gridx=0;
+        gbc.gridy= 6;
+
+        add(new JLabel("Registro Materias"), gbc);
+
+        gbc.gridx=0;
+        gbc.gridy=7;
+        gbc.fill= GridBagConstraints.CENTER;
+        gbc.insets= new Insets(5, 100, 5, 100);
+        add(new JLabel("Nombre de la Materia"), gbc);
+
+
+        gbc.gridy = 8;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add( descrip, gbc );
+
+        gbc.gridx=0;
+        gbc.gridy=9;
+        gbc.fill= GridBagConstraints.CENTER;
+        add(new JLabel("Codigo de la Materia"), gbc);
+
+        gbc.gridy = 10;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        add( codeM, gbc );
+
+
+
+        gbc.gridy = 11;
+        gbc.gridx = 0;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        gbc.gridwidth=2;
+        add( registrarM, gbc );
+
+    }
+
+}
