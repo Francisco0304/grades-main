@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 
 public class MainMenu extends JMenuBar {
 
@@ -32,8 +34,14 @@ public class MainMenu extends JMenuBar {
 
             optionsMenu= new JMenu("Opciones");
             registrer = new JMenuItem("Registrar");
+            registrer.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, InputEvent.CTRL_MASK));
+            registrer.setIcon( new ImageIcon("resources/icons/register.png"));
             inscription = new JMenuItem("Inscribir");
+            inscription.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
+            inscription.setIcon( new ImageIcon("resources/icons/inscription.png"));
             consuler = new JMenuItem("Consultar");
+            consuler.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, InputEvent.CTRL_MASK));
+            consuler.setIcon( new ImageIcon("resources/icons/search.png"));
            // registrer.addActionListener((event) -> myWindow.getRegistrer().setVisible( true ));
             //  inscription.addActionListener((event) -> myWindow.getInscription().setVisible( true ) );
             //consuler.addActionListener((event) -> myWindow.getConsulter().setVisible( true ) );

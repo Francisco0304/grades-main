@@ -88,4 +88,5 @@ public class ManagementGrades {
     public ArrayList<Matter> getMatters() {
         return (ArrayList<Matter>) matters.clone();
     }
+
 }

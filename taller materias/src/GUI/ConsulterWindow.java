@@ -21,7 +21,7 @@ public class ConsulterWindow extends JInternalFrame {
     public ConsulterWindow(MainWindow mainWindow, JDesktopPane desktopPane){
         this.myWindow = mainWindow;
         this.desktopPane = desktopPane;
-        setSize( new Dimension(782,537));
+        setSize( new Dimension(382,537));
         setResizable(false);
         //setDefaultCloseOperation(HIDE_ON_CLOSE);
         //setClosable(true);
@@ -46,7 +46,7 @@ public class ConsulterWindow extends JInternalFrame {
         gbc.gridwidth=1;
         gbc.weightx=1.0;
         gbc.weighty =1.0;
-        gbc.insets = new Insets(0,50,0,50);
+        gbc.insets = new Insets(5,100,5,100);
         add(new JLabel("Seleccione"),gbc);
         gbc.weightx=0.0;
         gbc.weighty =0.0;

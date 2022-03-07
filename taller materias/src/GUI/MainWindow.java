@@ -13,8 +13,8 @@ public class MainWindow extends JFrame {
 
     public MainWindow (String title){
         super(title);
-        setMinimumSize(new Dimension(800, 600));
-        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setMinimumSize(new Dimension(400, 600));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(true);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());

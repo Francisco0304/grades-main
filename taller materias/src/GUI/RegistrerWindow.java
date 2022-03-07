@@ -26,7 +26,7 @@ public class RegistrerWindow extends JInternalFrame {
     public RegistrerWindow(MainWindow mainWindow, JDesktopPane desktopPane){
         this.myWindow = mainWindow;
         this.desktopPane = desktopPane;
-        setSize( new Dimension(782,537));
+        setSize( new Dimension(382,537));
         setResizable(false);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setClosable(true);
@@ -138,6 +138,7 @@ public class RegistrerWindow extends JInternalFrame {
         add( registrarM, gbc );
 
     }
+
     public void ocultarBarraTitulo()
     {
         Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
